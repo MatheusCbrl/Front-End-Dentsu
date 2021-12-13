@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Front-End Matheus Cabral</title>
+</head>
+<body>
+    <h1> Front-End Matheus Cabral </h1>
+
+    <div class="container">
+        <img  class="isobar-icon" src="./assets/logo.png"></img>
+        <button class="albuns-button"onclick="displaycaracters(bands)">BANDAS</button>
+        <button class="albuns-button"onclick="displaycaractersInfo(bands)">ALBUNS</button>
+        <select
+        class="filter-icon" 
+        id="filters" 
+        name="filters" 
+        onchange="filterChange(bands)">
+            <option value="none"> </option>
+            <option value="ABFilter">Ordem Alfabética</option>
+            <option value="FansFilter">Popularidade</option>
+        </select>
+        
+
+        
+        <input type="text"  name="searchBar" id="searchBar"class="filter-input">
+        <img  class="search-icon" src="./assets/search.png"></img>
+
+        <nav id="navigation"></nav>
+        <strong style="color:white"id="new" class="result-music"></strong> <br/>     
+        
+    </div>
+    <ul id="bandasList"></ul>
+
+    <footer > 
+        <div class="as-container">
+            <div class="as-choice-card">
+              <i class="as-card-icon fas "></i>
+              <h3 class="as-card-title">
+                Pode entrar em contato comigo clicando ao lado
+              </h3>
+              <p class="as-card-info">
+                Agradeço pelo teste e pela oportunidade, aguardo breve retorno.
+              </p>
+              <button class="as-card-cta">
+                <a href="https://api.whatsapp.com/send?phone=+5554999307783&text=Ol%C3%A1%20" target="_blank" title="WhatsApp">
+                    <span class="text-indigo-400 font-bold">WhatsApp
+                </a>
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+    </footer>
+   
+    <script src="./js/main.js"></script>
+</body>
+</html>

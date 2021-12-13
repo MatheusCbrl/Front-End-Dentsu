@@ -1,0 +1,307 @@
+body {
+    font-family:"Helvetica Neue",sans-serif;
+    /* background image from http://photosof.org/ */
+    background:url(https://s.cdpn.io/44759/dark_blue_background-wide.jpg)  #343838;
+    margin:0;
+    padding:2em;
+    text-align:center;
+    height:100%
+  }
+  nav {
+    margin:1em auto;
+    position:relative;
+    max-width:480px;
+    text-align:left;
+    background: #131515;
+  }
+* {
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 26px;
+    line-height: 22px;
+    color: #737373;
+    margin-bottom: 30px;
+}
+
+p{
+   
+    color: #737373;  
+}
+.container {
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 1000px;
+    text-align: center;
+}
+
+#bandasList {
+    padding-inline-start: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 20px;
+}
+
+.bands {
+    list-style-type: none;
+    background-color: #424F62;
+    border-radius: 3px;
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+        'name image'
+        'bands image';
+    text-align: left;
+}
+.bands > h2 {
+    grid-area: name;
+    padding-bottom: 40px;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 26px;
+    line-height: 22px;
+    color: #737373;
+    margin-bottom: 0px;
+}
+
+.bands > p {
+    grid-area: bands;
+    margin: 0;
+    color: #dfd5d5;
+    margin-top: -18px;
+}
+
+.bands > img {
+    max-height: 100px;
+    grid-area: image;
+    border-radius: 50px;
+}
+
+.bandsInfo {
+    list-style-type: none;
+    background-color: #424F62;
+    border-radius: 18px;
+    padding: 12px 13px;
+    display: grid;
+    grid-template-columns: 1fr 0fr;
+    grid-template-areas:
+        'name image'
+        'bands image';
+    text-align: left;
+    align-content: space-between;
+    justify-content: space-around;
+    align-items: stretch;
+    justify-items: start;
+
+}
+
+.bandsInfo > h2 {
+    grid-area: name;
+    color: #737373;
+    margin-bottom: 0px;
+}
+
+.bandsInfo > p {
+    grid-area: bands;
+    margin: 10px;
+    color: #dfd5d5;
+    margin-top: 8px;
+}
+.bandsInfo > h5 {
+    grid-area: bands;
+    margin: 3px;
+    color: #737373;
+    margin-top: 335px;
+}
+
+.bandsInfo > img {
+    max-height: 100px;
+    grid-area: image;
+    border-radius: 50px;
+}
+
+#searchBar {
+    width: 100%;
+    height: 32px;
+    border-radius: 3px;
+    border: 1px solid #0f38a7;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+.search-icon{
+    position: relative;
+    float: right;
+    width: 25px;
+    height: 25px;
+    top: -29px;
+    right: 9px; 
+  }
+
+
+  .isobar-icon{
+    position: relative;
+    float: right;
+    width: 100px;
+    height: 25px;
+    top: -8px;
+    right: 21px;
+  }
+  .filter-icon{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    top: 75px;
+    left: 116px;
+    background: url(../assets/order_by.png) no-repeat top center;
+    background-size: 30px;
+
+  }
+  .no_result_img{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    left: 0px;
+  }
+  .resut-music{
+    position: relative;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    top: 22px;
+    color: white;
+
+  }
+
+  .albuns-button{
+
+    padding: 9px 24px;
+    border-radius: 30px;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    box-shadow: var(--elevation-3);
+    position: relative;
+    align-items: center;
+    width: 105px;
+    height: 30px;
+    top: -50px;
+    left: 143px;
+  }
+.no_results_txt{
+    align-items: center;
+    left: 6px;
+    color: white;
+    font-size: 22px;
+    font-weight: bolder;
+    position: relative;
+
+}
+.dados{
+    grid-area: name;
+    padding-bottom: 40px;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 26px;
+    line-height: 22px;
+    color: #737373;
+    margin-bottom: 0px;  
+}
+.redes{
+    font-size: 10px;
+}
+
+
+
+:root{
+    --primary-color: #737373;
+    --text-color: rgba(0,0,0,0.65);
+    --light-color: #ffffff;
+    --elevation-1: 0px 1px 4px rgba(0, 0, 0, 0.08), 0px 1px 2px rgba(0, 0, 0, 0.12);
+    --elevation-2: 0px 2px 8px rgba(0, 0, 0, 0.08), 0px 2px 4px rgba(0, 0, 0, 0.12);
+    --elevation-3: 0px 3px 12px rgba(0, 0, 0, 0.08), 0px 3px 6px rgba(0, 0, 0, 0.12);
+  }
+  html, body{
+    height:100%;
+  }
+  body{  
+    font-family: "Roboto",sans-serif;
+    color: var(--text-color);
+     background-color: #CBD3F1;
+  }
+  .as-container{
+    display:flex;
+    
+    height:100%;
+    justify-content:center;
+    align-items:center;
+  }
+  .as-choice-card{
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 69px 12px 45px 14px;
+    width: 100%;
+    box-shadow: var(--elevation-1);
+    background-color: #ffffff;
+    cursor: pointer;
+    top: 40px;
+  }
+  .as-choice-card *{
+    position:relative;
+    z-index:2;
+  }
+  .as-choice-card:after{
+    content: '';
+    position:absolute;
+    
+    top:0;
+    left:0;
+    width:4px;
+    height:100%;
+    
+    background-color:var(--primary-color);
+    transition: ease-in-out .3s;
+    z-index:0;
+  }
+  .as-card-icon{
+    position:absolute;
+    display:flex;
+    
+    justify-content:center;
+    align-items:center;
+    width:72px;
+    height:72px;
+    top: -36px;
+    
+    font-size: 25px;
+    color:var(--light-color);
+    background-color:var(--primary-color);
+    border-radius:50%;
+    box-shadow: var(--elevation-2);
+    transition: ease-in-out .3s;
+  }
+  .as-card-title,
+  .as-card-info{
+    transition:ease-in-out .3s;
+  }
+  .as-card-info{
+    width: 403px;;
+    padding-bottom:32px;
+    margin:0;
+  }
+  .as-card-cta{
+    padding: 12px 36px;
+    
+    border-radius:30px;
+    border:none;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    box-shadow: var(--elevation-3);
+   
+  }
